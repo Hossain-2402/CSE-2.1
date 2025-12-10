@@ -1,2 +1,139 @@
 hasan.cse@aust.edu
 fahim.ahmed13014@gmail.com
+
+
+
+
+Flutter supports:
+    android
+    ios
+    windows
+    Mac
+    Linux
+    Web
+
+
+Library:
+    code already written
+    we reuse it
+
+
+Framework:
+    Environment
+    takes our code and show it in a simulator
+
+
+Flutter version:
+    3.38.3
+    - first 3 stands for Major update
+    3.41.3
+    - update after 3 months
+    3.38.4
+    - 3 -> 4 means minor update
+
+
+Datatype:
+    int
+    double
+    boolean
+    String
+    void
+
+
+
+List 
+    - dynamic
+    - similar to vector
+    - List<dynamic> 
+
+
+<> is a generic 
+
+
+
+
+Parameter :
+    - Positional
+        int calculate(int a, int b); // a,b must be assigned with a value
+    - named
+        int calculate({int a, int b}){
+            return a+b;
+        }
+        calculate(a:10, b:20);
+
+        ? = optional
+        required = must 
+
+        int? calculate({required int a, required int b})
+
+        calculate(a:10 , b:20);
+
+
+
+Mixin = allows multiple inheritance
+    - class child with Parent1, Parent2
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+void main() {
+  //   print("");
+  //   int a;
+  //   double d;
+  //   bool b;
+  //   String s;
+
+  //   var count = 4;
+  //   //count = "Hossain"; // Not allowed
+
+  //   dynamic name = "Hossain";
+  //   print("Number of people : $name");
+  //   name = 4;
+  //   print("Number of people : $name");
+  // ---------------------------------------
+
+  //   int count;
+  //   print(count); // Gives error
+
+  //   int? c; // if null operator
+  //   print(c); // prints : null
+
+  //   // null assertion operator
+  //   int? numberOfStudents;
+  //   int numberOfSections = numberOfStudents ?? 5;
+
+  //   print(numberOfSections);
+  // ---------------------------------------
+
+  //   List numberOfSections = [1, 2, 'Hossain', false];
+  //   print(numberOfSections);
+
+  //   List<int> numbers = [1, 2, 3, 4, 5];
+
+  //   print(numbers.length);
+  //   print(numbers.runtimeType); // List<int>
+
+  //   Map<String, int> marksOfStudents = {'Hossain': 5, 'Hasan': 6};
+  //   print(marksOfStudents['Hossain']); // prints 5
+  // ---------------------------------------
+
+  calculate(a: 20, b: 10);
+
+  Human me = Human();
+}
+
+class Human {
+  int? age;
+  Human() {}
+
+  void calculate() {}
+}
+
+int calculate({int? a, int? b}) {
+  return (a ?? 0) + (b ?? 0);
+}
+
+int calc({required int a, required int b}) {
+  return a + b;
+}
