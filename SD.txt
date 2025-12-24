@@ -147,3 +147,103 @@ int calculate({int? a, int? b}) {
 int calc({required int a, required int b}) {
   return a + b;
 }
+
+
+
+
+
+
+
+
+
+
+                                                            LAB-2
+                                                            -----
+
+Project name :  random (no space | lowwer case | use underscore)
+Android Language     : Kotlin
+
+
+
+
+.dart_tool -> dart + flutter version memtioned
+.idea -> .gitignore is here
+android/ios/linux/macos/web/windows -> 
+build -> detail of RUN process
+lib -> amar kaj ekhane
+
+
+void main(){
+    // App runs this function
+}
+
+check dribble => https://dribbble.com/shots/23875668-Social-Media-app
+
+# Every widget is a class
+# Widget works like a lego set
+
+
+
+
+
+Hot reload => works on CTRL+S -> runs the entire code under "Widget build(BuildContext context)"
+Hot restart => works on refreash -> runs the entire code under "main()"
+
+scaffold => divides the screen in appbar, body, navigation debugShowCheckedModeBanner  
+            Every screen starts with this
+
+
+
+Image : NetworkImage, AssetImage, File
+
+Annonumous Function : function with no return type + no name
+
+Context : mouse position
+
+Widget:
+    MaterialApp()
+    -------------
+    MaterialApp(
+        debugShowCheckedModeBanner: false, // remove
+        home : Scaffold(
+            appbar: AppBar(
+                leading : Text("Icon", 
+                                style: TextStyle(
+                                    color: Color(0xFF4d4d4d),
+                                    fontSize: 20.0
+                                )
+                            )
+                title : Text("Welcome")
+            ),
+            body: Column(
+                mainAxisAlignment : MainAxisAlignment.center //  MainAxisAlignment.end // MainAxisAlignment.start // MainAxisAlignment.spaceAround // MainAxisAlignment.spaceBetween // MainAxisAlignment.spaceEvenly
+                children : [
+                    Image(
+                        image: NetworkImage()
+                    ),
+
+                    Text(),
+
+                    ElevatedButton(
+                        onPressed : (){ Navigator.push(context, MaterialPageRoute(builder: (context)=> SecondPage())) },
+                        child : Text(">>")
+                    )
+
+
+                ] // press ALT+ENTER
+            )
+        )
+    );
+
+
+
+
+
+
+App concept
+Feature
+Impact
+
+
+
+HW: Container, PageRoute
