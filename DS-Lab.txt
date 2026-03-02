@@ -612,4 +612,121 @@ int main(){
 // (A+B/C*(D+E)-F)
 // (5+6/2*(8+4)-7)
 
+// --------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<int> v[11];
+
+map<int,bool> visited;
+
+
+
+void BFS(int a){
+    queue<int> q;
+    q.push(a);
+
+
+    while(!q.empty()){
+        int currentNode = q.front();
+        q.pop();
+        cout << currentNode << " ";
+
+        for(int i=0;i<v[currentNode].size();i++){
+            int child = v[currentNode][i];
+            if(visited[child] == false){
+                q.push(child);
+                visited[child] = true;
+            }
+        }
+
+    }
+}
+
+
+
+void DFS(int a){
+    cout << a << " ";
+    if(v[a].size() == 0 ) return;
+    for(int i=0;i<v[a].size();i++){
+        int child = v[a][i];
+        DFS(child);
+    }
+
+
+}
+
+
+
+int main(){
+
+    int n,e;
+    cin >> n >> e;
+    for(int i=0;i<e;i++){
+        int nodeA, nodeB;
+        cin >> nodeA >> nodeB;
+        v[nodeA].push_back(nodeB);
+    }
+    cout << endl;
+//    for(int i=1;i<=n;i++){
+//        cout << i << "->";
+//        for(int j=0;j<v[i].size();j++){
+//            cout << v[i][j] << " ";
+//        }
+//        cout << endl;
+//    }
+
+    DFS(1);
+    // TODO : write the visited portion to make sure it is not repeating nodes
+
+
+
+
+
+}
+
+
+
+/*
+ vector<int> v; meaning v is a list : v = [1,2,3,4,5]
+ vector<int> v[5]; meaning v is a list : v = [[0,1],[0,1,2],[0],[0,1,2,3,4]]
+
+input:
+10 13
+1 2
+1 3
+1 4
+2 6
+6 10
+10 5
+9 10
+8 5
+3 8
+7 8
+7 9
+3 7
+4 7
+
+
+
+output:
+1->2 3 4
+2->6
+3->8 7
+4->7
+5->
+6->10
+7->8 9
+8->5
+9->10
+10->5
+
+
+*/
+// 1 2 6 10 3 8 7 8 9 10 4 7 8 9 10
 
